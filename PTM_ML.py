@@ -98,7 +98,7 @@ def cross_validate_normalize_predict():
         X_test_original = X_test
 
         # # # data standardization - mean 0, sd = 1  - https://www.geeksforgeeks.org/how-to-scale-pandas-dataframe-columns/
- StandardScaler()
+        std_scalar = StandardScaler()
         X_train = std_scaler.fit_transform(X_train)
         X_test = std_scaler.transform(X_test)
         model = XGBRegressor(n_jobs=8, n_estimators=100)
