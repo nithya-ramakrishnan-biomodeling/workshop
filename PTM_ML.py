@@ -40,7 +40,6 @@ def shap_explain2(model, X_test, features):
     shap.plots.beeswarm(exp)
 
 def main():
-    mpl.rcParams['agg.path.chunksize'] = 10000
 
     [df_ML_X,df_ML_Y]=load_csv()
     X_train, X_test, y_train, y_test = train_test_split(df_ML_X, df_ML_Y, test_size = 0.30, random_state = 999)
@@ -113,4 +112,4 @@ def cross_validate_normalize_predict():
 
 
 if __name__ == "__main__":
-        cross_validate_normalize_predict()
+        main()
